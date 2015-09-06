@@ -13,6 +13,7 @@ I'd like to use this as an opportunity to learn more javascript.
 ##### What technologies/frameworks/patterns will you be employing?
 - JavaScript
 - HTML/CSS
+- Ruby on Rails (prob don't need to do this with rails)
 - possibly sound recognition integration if I can figure that out
 
 ##### What are the tech and/or skill dependencies of your project?
