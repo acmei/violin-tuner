@@ -24,4 +24,4 @@ Person will be able to play notes to tune their instrument. They will also be ab
 
 
 ##### Creat a Trello board in which you decompose the tasks and deliverables of the project.
-[https://trello.com/b/BhJPTYaY/violin-tuner-metronome](Trello Board)
+[Trello Board](https://trello.com/b/BhJPTYaY/violin-tuner-metronome)
