@@ -10,6 +10,8 @@ $(document).ready(function() {
     stopMetronome();
   });
 
+  $('.metronome').draggable();
+
 });
 
 var nIntervId;
@@ -21,7 +23,7 @@ function play() {
 }
 
 function metronome() {
-  nIntervId = setInterval(play, 50);
+  nIntervId = setInterval(play, 500);
 }
 
 function stopMetronome() {
