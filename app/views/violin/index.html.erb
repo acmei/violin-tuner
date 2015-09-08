@@ -1,3 +1,46 @@
 <div class="violin">
-  <%= image_tag "violin.png" %>
+  <%= link_to "button", "#", class: "btn btn-info" %>
+  <div class="audio">
+    <audio id="tickAudio">
+      <source src="./sounds/tick.mp3" type="audio/mpeg"></source>
+    </audio>
+  </div>
+  <%= link_to "stop", "#", class: "btn btn-danger" %>
 </div>
+
+
+<!-- 
+
+Larghissimo       | 24 BPM (Beats per minute in a 4/4 time) and under
+Grave             | 25–45 BPM
+Largo             | 40–60 BPM
+Lento             | 45–60 BPM
+Larghetto         | 60–66 BPM
+Adagio            | 66–76 BPM
+Adagietto         | 72–76 BPM
+Andante           | 76–108 BPM
+Andantino         | 80–108 BPM
+Marcia moderato   | 83–85 BPM
+Andante moderato  | 92–112 BPM
+Moderato          | 108–120 BPM
+Allegretto        | 112–120 BPM
+Allegro moderato  | 116–120 BPM
+Allegro           | 120–168 BPM
+Vivace            | 168–176 BPM
+Vivacissimo       | 172–176 BPM
+Allegrissimo      | 172–176 BPM
+Allegro vivace
+Presto            | 168–200 BPM
+Prestissimo       | 200 BPM and over
+
+
+grave    |  < 40 BPM
+largo    |  40 - 60 BPM
+adagio   |  60 - 80 BPM
+andante  |  80 - 100 BPM
+moderato |  100 - 120 BPM
+allegro  |  120 - 140 BPM
+vivace   |  140 - 160 BPM
+presto   |  > 160 BPM
+
+ -->
