@@ -15,8 +15,21 @@ body {
 
 .metronome {
   margin: auto;
-  background-color: #f00;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+}
+
+.scale {
+  margin: auto;
+  width: 70%;
+  height: 12px;
+  border-top: 2px solid #fff;
+}
+
+.selector {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  background-color: transparent;
+  width: 2px;
+  height: 2px;
 }
