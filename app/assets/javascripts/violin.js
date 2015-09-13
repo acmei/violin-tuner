@@ -1,16 +1,16 @@
 $(document).ready(function() {
   console.log('ready!');
-  $('.btn-info').mousedown(function(event){
+  $('.btn-info').mousedown(function(event) {
     event.preventDefault();
     metronome(this.text);
   });
 
-  $('.btn-default').mousedown(function(event){
+  $('.btn-default').mousedown(function(event) {
     event.preventDefault();
     play(this.text);
   });
 
-  $('.btn-danger').mousedown(function(event){
+  $('.btn-danger').mousedown(function(event) {
     event.preventDefault();
     stopMetronome();
   });
@@ -21,8 +21,15 @@ $(document).ready(function() {
   });
 });
 
-var nIntervId;
-// var heartBeat;
+
+Audio.prototype.stop = function() {
+  this.pause();
+  this.currentTime = 0.0;
+}
+
+var tock;
+var heartBeat;
+var tuner;
 
 // play audio selected
 function tick() {
@@ -35,7 +42,12 @@ function tick() {
 function play(note) {
   var audio_tag = document.getElementById(note + 'Audio');
   audio_tag.currentTime = 0;
-  audio_tag.play();
+  play = audio_tag.play();
+}
+
+function endPlay(note) {
+  audio_tag.pause();
+  audio_tag.currentTime = 0;
 }
 
 // returns rate of beats
@@ -45,18 +57,20 @@ function beats(bpm) {
 
 // plays metronome beats at set interval
 function metronome(bpm) {
-  nIntervId = setInterval(tick, beats(bpm));
-  // heartBeat = setInterval(pop('.fa'), beats(90));
+  tock = setInterval(tick, beats(bpm));
+  tuner = setInterval(play, 100)
+  heartBeat = setInterval(pop, beats(bpm));
 }
 
 // stops metronome
 function stopMetronome() {
-  clearInterval(nIntervId);
-  // clearInterval(heartBeat);
+  clearInterval(tock);
+  clearInterval(heartBeat);
+  clearInterval(tuner);
 }
 
-function pop(font) {
-  $(font)
+function pop() {
+  $('.fa')
   .addClass('popper')
   .on('animationend',
     function() { $(this).removeClass('popper'); }

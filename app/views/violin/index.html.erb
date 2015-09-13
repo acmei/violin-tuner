@@ -2,17 +2,17 @@
   <audio id="tickAudio">
     <source src="./sounds/tick.mp3" type="audio/mpeg"></source>
   </audio>
-  <audio id="gAudio">
-    <source src="./sounds/g.mp3" type="audio/mpeg"></source>
+  <audio id="GAudio">
+    <source src="./sounds/G.mp3" type="audio/mpeg"></source>
   </audio>
-  <audio id="dAudio">
-    <source src="./sounds/d.mp3" type="audio/mpeg"></source>
+  <audio id="DAudio">
+    <source src="./sounds/D.mp3" type="audio/mpeg"></source>
   </audio>
-  <audio id="aAudio">
-    <source src="./sounds/a.mp3" type="audio/mpeg"></source>
+  <audio id="AAudio">
+    <source src="./sounds/A.mp3" type="audio/mpeg"></source>
   </audio>
-  <audio id="eAudio">
-    <source src="./sounds/e.mp3" type="audio/mpeg"></source>
+  <audio id="EAudio">
+    <source src="./sounds/E.mp3" type="audio/mpeg"></source>
   </audio>
 </div>
 <div class="violin">
@@ -20,12 +20,15 @@
   <%= link_to "D", "#", class: "btn btn-default" %>
   <%= link_to "A", "#", class: "btn btn-default" %>
   <%= link_to "E", "#", class: "btn btn-default" %>
+  <%= link_to "stop", "#", class: "btn btn-danger" %>
 </div>
 <div class="metronome">
   <%= link_to "25", "#", class: "btn btn-info" %>
   <%= link_to "50", "#", class: "btn btn-info" %>
   <%= link_to "70", "#", class: "btn btn-info" %>
+  <%= link_to "85", "#", class: "btn btn-info" %>
   <%= link_to "100", "#", class: "btn btn-info" %>
+  <%= link_to "125", "#", class: "btn btn-info" %>
   <%= link_to "150", "#", class: "btn btn-info" %>
   <%= link_to "175", "#", class: "btn btn-info" %>
   <%= link_to "185", "#", class: "btn btn-info" %>
@@ -65,4 +68,8 @@
     <li default="184"><strong>Presto</strong> <em>168-200 BPM</em></li>
     <li default="200"><strong>Prestissimo</strong> <em>> 200 BPM</em></li>
   </ul>
+</div>
+
+<div class="heart">
+  <%= fa_icon "heart" %>
 </div>
