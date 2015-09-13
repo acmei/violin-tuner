@@ -1,13 +1,36 @@
+<div class="audio">
+  <audio id="tickAudio">
+    <source src="./sounds/tick.mp3" type="audio/mpeg"></source>
+  </audio>
+  <audio id="gAudio">
+    <source src="./sounds/g.mp3" type="audio/mpeg"></source>
+  </audio>
+  <audio id="dAudio">
+    <source src="./sounds/d.mp3" type="audio/mpeg"></source>
+  </audio>
+  <audio id="aAudio">
+    <source src="./sounds/a.mp3" type="audio/mpeg"></source>
+  </audio>
+  <audio id="eAudio">
+    <source src="./sounds/e.mp3" type="audio/mpeg"></source>
+  </audio>
+</div>
 <div class="violin">
-  <%= link_to "button", "#", class: "btn btn-info" %>
-  <div class="audio">
-    <audio id="tickAudio">
-      <source src="./sounds/tick.mp3" type="audio/mpeg"></source>
-    </audio>
-  </div>
-  <%= link_to "stop", "#", class: "btn btn-danger" %>
+  <%= link_to "G", "#", class: "btn btn-default" %>
+  <%= link_to "D", "#", class: "btn btn-default" %>
+  <%= link_to "A", "#", class: "btn btn-default" %>
+  <%= link_to "E", "#", class: "btn btn-default" %>
 </div>
 <div class="metronome">
+  <%= link_to "25", "#", class: "btn btn-info" %>
+  <%= link_to "50", "#", class: "btn btn-info" %>
+  <%= link_to "70", "#", class: "btn btn-info" %>
+  <%= link_to "100", "#", class: "btn btn-info" %>
+  <%= link_to "150", "#", class: "btn btn-info" %>
+  <%= link_to "175", "#", class: "btn btn-info" %>
+  <%= link_to "185", "#", class: "btn btn-info" %>
+  <%= link_to "200", "#", class: "btn btn-info" %>
+  <%= link_to "stop", "#", class: "btn btn-danger" %>
   <div class="scale">
     <div class="selector">
       <%= "\u25B3" %>
@@ -15,39 +38,31 @@
   </div>
 </div>
 
-
-<!-- 
-
-Larghissimo       | 24 BPM (Beats per minute in a 4/4 time) and under
-Grave             | 25–45 BPM
-Largo             | 40–60 BPM
-Lento             | 45–60 BPM
-Larghetto         | 60–66 BPM
-Adagio            | 66–76 BPM
-Adagietto         | 72–76 BPM
-Andante           | 76–108 BPM
-Andantino         | 80–108 BPM
-Marcia moderato   | 83–85 BPM
-Andante moderato  | 92–112 BPM
-Moderato          | 108–120 BPM
-Allegretto        | 112–120 BPM
-Allegro moderato  | 116–120 BPM 
-Allegro           | 120–168 BPM
-Vivace            | 168–176 BPM
-Vivacissimo       | 172–176 BPM
-Allegrissimo      | 172–176 BPM
-Allegro vivace
-Presto            | 168–200 BPM
-Prestissimo       | 200 BPM and over
-
-
-grave    |  < 40 BPM
-largo    |  40 - 60 BPM
-adagio   |  60 - 80 BPM
-andante  |  80 - 100 BPM
-moderato |  100 - 120 BPM
-allegro  |  120 - 140 BPM
-vivace   |  140 - 160 BPM
-presto   |  > 160 BPM
-
- -->
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <%= fa_icon "music" %> Select a tempo
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li default="24"><strong>Larghissimo</strong> <em><= 24</em></li>
+    <li default="35"><strong>Grave</strong> <em>25-45 BPM</em></li>
+    <li default="50"><strong>Largo</strong> <em>40-60 BPM</em></li>
+    <li default="58"><strong>Lento</strong> <em>45-60 BPM</em></li>
+    <li default="63"><strong>Larghetto</strong> <em>60-66 BPM</em></li>
+    <li default="70"><strong>Adagio</strong> <em>66-76 BPM</em></li>
+    <li default="74"><strong>Adagietto</strong> <em>72-76 BPM</em></li>
+    <li default="92"><strong>Andante</strong> <em>76-108 BPM</em></li>
+    <li default="94"><strong>Andantino</strong> <em>80-108 BPM</em></li>
+    <li default="84"><strong>Marcia moderato</strong> <em>83-85 BPM</em></li>
+    <li default="100"><strong>Andante moderato</strong> <em>92-112 BPM</em></li>
+    <li default="114"><strong>Moderato</strong> <em>108-120 BPM</em></li>
+    <li default="116"><strong>Allegretto</strong> <em>112-120 BPM</em></li>
+    <li default="118"><strong>Allegro moderato</strong> <em>116-120 BPM</em></li>
+    <li default="144"><strong>Allegro</strong> <em>120-168 BPM</em></li>
+    <li default="172"><strong>Vivace</strong> <em>168-176 BPM</em></li>
+    <li default="174"><strong>Vivacissimo</strong> <em>172-176 BPM</em></li>
+    <li default="174"><strong>Allegrissimo/Allegro vivace</strong> <em>172-176 BPM</em></li>
+    <li default="184"><strong>Presto</strong> <em>168-200 BPM</em></li>
+    <li default="200"><strong>Prestissimo</strong> <em>> 200 BPM</em></li>
+  </ul>
+</div>
